@@ -6,6 +6,10 @@ export function buildApp(options: FastifyServerOptions = {}) {
     ...options
   });
 
+  // Intentional TypeScript error for failing-case demo:
+  // assigning number to a string typed constant
+  const broken: string = 123 as unknown as string;
+
   app.get('/', async () => {
     return {
       message: 'CI/CD Lab Fastify app is running',
