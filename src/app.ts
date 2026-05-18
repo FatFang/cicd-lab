@@ -8,7 +8,7 @@ export function buildApp(options: FastifyServerOptions = {}) {
 
   // Intentional TypeScript error for failing-case demo:
   // assigning number to a string typed constant
-  const broken: string = 123;
+  const broken: string = '123';
 
   app.get('/', async () => {
     return {
