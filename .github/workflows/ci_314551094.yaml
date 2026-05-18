@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  ci:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,7 +24,7 @@ jobs:
       - name: TypeScript typecheck
         run: npm run typecheck
 
-      - name: Prettier check
+      - name: Prettier format check
         run: npm run format:check
 
       - name: Run tests
